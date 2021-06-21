@@ -3,12 +3,12 @@ import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
 import axios from "axios";
 import Article from "../components/Article";
-import { getAllByPlaceholderText } from "@testing-library/react";
 
 const News = () => {
     const [newsData, setNewsData] = useState([]);
     const [author, setAuthor] = useState("");
     const [content, setContent] = useState("");
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         getData();
@@ -23,17 +23,22 @@ const News = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios
-            .post("http://localhost:3004/articles", {
-                author,
-                content,
-                date: Date.now(),
-            })
-            .then(() => {
-                setAuthor("");
-                setContent("");
-                getData();
-            })
+        if (content.length < 10) {
+            setError(true);
+        } else {
+            axios
+                .post("http://localhost:3004/articles", {
+                    author,
+                    content,
+                    date: Date.now(),
+                })
+                .then(() => {
+                    setError(false);
+                    setAuthor("");
+                    setContent("");
+                    getData();
+                });
+        }
     };
 
     return (
@@ -50,10 +55,14 @@ const News = () => {
                     value={author}
                 />
                 <textarea
+                    style={{
+                        border: error ? "1px solid red" : "1px solid #61dafb",
+                    }}
                     onChange={(e) => setContent(e.target.value)}
                     placeholder="Message"
                     value={content}
                 ></textarea>
+                {error && <p> 140 caractères mini!</p>}
                 <input type="submit" value="Envoyer" />
             </form>
 
