@@ -62,7 +62,7 @@ const News = () => {
                     placeholder="Message"
                     value={content}
                 ></textarea>
-                {error && <p> 140 caractères mini!</p>}
+                {error && <p> 10 caractères mini!</p>}
                 <input type="submit" value="Envoyer" />
             </form>
 

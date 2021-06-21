@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DeleteArticle from "./DeleteArticle";
 
 const Article = ({ article }) => {
     const [isEditing, setIsEditing] = useState(false);
@@ -31,6 +32,7 @@ const Article = ({ article }) => {
 
     };
 
+
     return (
         <div className="article" style={{background : isEditing ? "#f3feff" : "white"}}>
             <div className="card-header">
@@ -55,7 +57,7 @@ const Article = ({ article }) => {
                 ) : (
                     <button onClick={handleEdit}>Valider</button>
                 )}
-                <button>Delete</button>
+                <DeleteArticle id={article.id} />
             </div>
         </div>
     );
