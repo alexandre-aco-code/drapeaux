@@ -32,51 +32,15 @@
     },
     {
       "author": "Denis",
-      "content": "Super bien les amis",
+      "content": "Trop cool ça fonctionne!",
       "date": 1624223890643,
       "id": 6
     },
     {
       "author": "Daniel",
-      "content": "Trop bien",
+      "content": "Jean michel",
       "date": 1624225435150,
       "id": 24
-    },
-    {
-      "author": "John",
-      "content": "mickael ca marche!",
-      "date": 1624268433020,
-      "id": 25
-    },
-    {
-      "author": "sdsd",
-      "content": "sdfgsdfgsdfgsdfgsdfgsdfgsdfgdsssssssdffffffffffffff",
-      "date": 1624268972859,
-      "id": 26
-    },
-    {
-      "author": "",
-      "content": "qsdfqsdfqsdfqsdf",
-      "date": 1624268976247,
-      "id": 27
-    },
-    {
-      "author": "qsdfqsdf",
-      "content": "je fais un test de plus de 10 caracters",
-      "date": 1624268985816,
-      "id": 28
-    },
-    {
-      "author": "herg",
-      "content": "sdfgsdfgdfgsdfgsdfgsdf",
-      "date": 1624269030267,
-      "id": 29
-    },
-    {
-      "author": "sdfgsdfg",
-      "content": "sdfgsdfgsdfgsdfgsdfgsdfg",
-      "date": 1624269037108,
-      "id": 30
     }
   ]
 }
